@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Hivatkozások formázása</title>
+<style>
+body {background-color: green;}
+
+#para1 {
+    text-align: left;
+    color: yellow;
+    font-size: 18pt;
+    text-align: justify;
+
+}
+a:link {color: red;}
+a:visited {color: gray;}
+a:hover {color: orange;}
+a:active {color: red;}
+</style>
+
+</head>
+<body>
+<h1>CCS - állapot alapján kijelölés - hivatkozás</h1>
+<div style="width: 600px;">
+<p id="para1">Ha még nem látogattuk meg korábban a hibatkozott weboldalt,  akkor 
+    az alábbi hivatkozás zöld betűszínnel jelenik meg,
+    egyébként pedig szürke színnel. Ha a hivatkozás fölé visszük 
+    a kurzort, akkor a szín narancssárgára vált, ha pedig
+    a hivatkozásra kattintunk, akkor pirosra.</p>
+
+<p id="para1"> <a href="https://unithe.hu/" target="_blank">Kattints ide
+     <i>unithe.hu</i>weblap megnyitáshoz!</a></p>
+</div>
+
+</body>
+
+
+</html>
