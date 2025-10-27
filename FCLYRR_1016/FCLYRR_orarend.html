@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Heti órarend</title>
+<style>
+  :root{
+    --hour-start: 8;                  
+    --hours: 11;                      
+    --hour-h: 70px;                   
+    --grid: grey;                  
+    --bg: white;
+    --event-bg: yellow;              
+    --event-dot: #5b6bff;
+    --border: black;
+    --text: #1f2937;
+    --muted: red;
+  }
+
+  *{ box-sizing: border-box; }
+  body{
+    margin:0; background:var(--bg);
+    font: 14px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color:var(--text);
+  }
+
+  .wrap{
+    max-width: 1120px;
+    margin: 18px auto 36px;
+    padding: 0 16px;
+  }
+
+  
+  .header{
+    display: grid;
+    grid-template-columns: 80px repeat(7, 1fr);
+    gap: 0;
+    align-items: end;
+    margin-bottom: 6px;
+    color:#3b82f6;                    
+  }
+  .dow{
+    text-align:center;
+    line-height:1.1;
+  }
+  .dow .name{ text-transform: lowercase; font-size: 13px; }
+  .dow .date{ font-size: 12px; color: var(--muted); }
+
+  /* rács + oszlopok */
+  .grid{
+    display: grid;
+    grid-template-columns: 80px repeat(7, 1fr);
+    border: 1px solid var(--border);
+    background:#fff;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  /* időtengely bal oldalt */
+  .times{
+    border-right:1px solid var(--border);
+    background: #fff;
+    position: relative;
+  }
+  .time-row{
+    height: var(--hour-h);
+    border-top: 1px solid var(--grid);
+    font-size: 12px;
+    color: var(--muted);
+    padding-top: 2px;
+    padding-left: 8px;
+  }
+  .time-row:first-child{ border-top: none; }
+
+  /* nap oszlopok */
+  .days{
+    display: contents; /* a 7 oszlop a nagy grid része */
+  }
+  .day{
+    position: relative;
+    height: calc(var(--hours) * var(--hour-h));
+    background:
+      repeating-linear-gradient(to bottom,
+        transparent 0, transparent calc(var(--hour-h) - 1px),
+        var(--grid) calc(var(--hour-h) - 1px), var(--grid) var(--hour-h));
+  }
+  .day + .day{ border-left: 1px solid var(--border); }
+
+  /* esemény dobozok */
+  .event{
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    border-radius: 8px;
+    background: var(--event-bg);
+    border: 1px solid #dfe3ff;
+    box-shadow: 0 1px 2px rgba(0,0,0,.06);
+    padding: 8px 10px 10px 12px;
+    font-size: 12px;
+    overflow: hidden;
+  }
+  .event .when{ font-weight:600; color:#6b7280; }
+  .event .title{ margin-top: 2px; }
+
+  /* átfedő (felezett) elrendezés */
+  .event.split-1{ width: calc(50% - 10px); left: 8px; }
+  .event.split-2{ width: calc(50% - 10px); left: calc(50% + 2px); }
+
+  /* kis kék pont a cím előtt */
+  .dot{
+    display:inline-block; width:6px; height:6px; border-radius:50%;
+    background: var(--event-dot); margin-right:6px; transform: translateY(-1px);
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- Napok + dátumok fejléc -->
+    <div class="header">
+      <div></div>
+      <div class="dow"><div class="name">hétfő</div><div class="date">13</div></div>
+      <div class="dow"><div class="name">kedd</div><div class="date">14</div></div>
+      <div class="dow"><div class="name">szerda</div><div class="date">15</div></div>
+      <div class="dow"><div class="name">csütörtök</div><div class="date">16</div></div>
+      <div class="dow"><div class="name">péntek</div><div class="date">17</div></div>
+      <div class="dow"><div class="name">szombat</div><div class="date">18</div></div>
+      <div class="dow"><div class="name">vasárnap</div><div class="date">19</div></div>
+    </div>
+
+    <!-- Rács -->
+    <div class="grid">
+
+      <!-- időtengely -->
+      <div class="times">
+        <!-- 8:00–19:00 -->
+        <div class="time-row">8:00</div>
+        <div class="time-row">9:00</div>
+        <div class="time-row">10:00</div>
+        <div class="time-row">11:00</div>
+        <div class="time-row">12:00</div>
+        <div class="time-row">13:00</div>
+        <div class="time-row">14:00</div>
+        <div class="time-row">15:00</div>
+        <div class="time-row">16:00</div>
+        <div class="time-row">17:00</div>
+        <div class="time-row">18:00</div>
+      </div>
+
+      <!-- 7 nap-oszlop -->
+      <div class="days">
+        <!-- HÉTFŐ -->
+        <div class="day">
+          <!-- két, egymást átfedő esemény 8:00–11:00 -->
+          <div class="event split-1" style="top: calc((0 * var(--hour-h))); height: calc(3 * var(--hour-h));">
+            <div class="when">8:00 – 11:00</div>
+            <div class="title"><span class="dot"></span>Programozás alapjai</div>
+          </div>
+          <div class="event split-2" style="top: calc((0 * var(--hour-h))); height: calc(3 * var(--hour-h));">
+            <div class="when">8:00 – 11:00</div>
+            <div class="title"><span class="dot"></span>Programozás alapjai</div>
+          </div>
+
+          <div class="event" style="top: calc((6 * var(--hour-h))); height: calc(3.833 * var(--hour-h));">
+            <div class="when">14:00 – 17:50</div>
+            <div class="title"><span class="dot"></span>Bevezetés TEX-be</div>
+          </div>
+        </div>
+
+        <!-- KEDD -->
+        <div class="day">
+          <div class="event" style="top: calc((0 * var(--hour-h))); height: calc(1.583 * var(--hour-h));">
+            <div class="when">8:00 – 9:35</div>
+            <div class="title"><span class="dot"></span>Webprogramozás alapjai</div>
+          </div>
+          <div class="event" style="top: calc((2 * var(--hour-h))); height: calc(3.403 * var(--hour-h));">
+            <div class="when">10:00 – 12:55</div>
+            <div class="title"><span class="dot"></span>Diszkrét matematika és lineáris algebra</div>
+          </div>
+        </div>
+
+        <!-- SZERDA -->
+        <div class="day">
+          <div class="event" style="top: calc((8 * var(--hour-h))); height: calc(3.167 * var(--hour-h));">
+            <div class="when">16:00 – 19:10</div>
+            <div class="title"><span class="dot"></span>Angol</div>
+          </div>
+        </div>
+
+        <!-- CSÜTÖRTÖK -->
+        <div class="day">
+          <div class="event" style="top: calc((0 * var(--hour-h))); height: calc(1.583 * var(--hour-h));">
+            <div class="when">8:00 – 9:35</div>
+            <div class="title"><span class="dot"></span>Webprogramozás alapjai</div>
+          </div>
+          <div class="event" style="top: calc((2 * var(--hour-h))); height: calc(1.25 * var(--hour-h));">
+            <div class="when">10:00 – 11:15</div>
+            <div class="title"><span class="dot"></span>Számítógép architektúrák</div>
+          </div>
+          <div class="event" style="top: calc((8 * var(--hour-h))); height: calc(3.167 * var(--hour-h));">
+    <div class="when">16:00 – 19:10</div>
+    <div class="title"><span class="dot"></span>Logika</div>
+  </div>
+        </div>
+
+        <!-- PÉNTEK -->
+        <div class="day">
+          <div class="event" style="top: calc((5.5 * var(--hour-h))); height: calc(4 * var(--hour-h));">
+            <div class="when">13:30 – 17:30</div>
+            <div class="title"><span class="dot"></span>Bevezetés az informatikába</div>
+          </div>
+        </div>
+
+        <!-- SZOMBAT -->
+        <div class="day"></div>
+
+        <!-- VASÁRNAP -->
+        <div class="day"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
