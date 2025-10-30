@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video lejátszása</title>
+    <style>
+        .grid {
+            margin-top:  2rem;
+            display: grid;
+            grid-template-columns: 1fr 2.5fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 1rem;
+            width: 40rem;
+        }
+        footer{
+            border-top: 4 px solid gray;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            width: 37.5rem;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Videó lejátszása_FCLYRR</h1>
+    </header>
+    <section>
+        <video src="FCLYRR_video.mp4" autoplay="false" controls width="600"></video>
+        <div class="grid"></div>
+    </section>
+</body>
+</html>

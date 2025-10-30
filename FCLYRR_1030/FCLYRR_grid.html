@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid használata</title>
+    <style>
+body {background-color: lightskyblue;}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr ;
+    grid-auto-rows: 100px;
+}
+
+* {
+    box-sizing: border-box;
+}
+.wrapper {
+    border: 20px solid lightcyan;
+    border-radius: 5px;
+    background-color: white;
+}
+.wrapper > div {
+    border: 2px solid orange;
+    border-radius: 5px;
+    background-color: bisque;
+    padding: 1em;
+    color: red;
+}
+        </style>
+
+</head>
+
+</body>
+<div class="wrapper">
+<div>Egy</div>
+<div>Kettő</div>
+<div>Három</div>
+<div>Négy</div>
+<div>Öt</div>
+
+
+
+</div>
+
+</html>
