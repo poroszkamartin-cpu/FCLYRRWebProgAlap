@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>JavaScript kódba html használata</h3>
+    <p id="szoveg">Üdvözlöm, nyomja meg a gombot a sorban. </p>
+
+    <button onclick="kiirat()">1. Kiiratás</button>
+    <button onclick="szoroz()">2. Szorzás</button>
+    <button onclick="vizsgalat()">3. Vizsgálat</button>
+
+    <button onclick="valtoztat()">4. Változtatás</button>
+    <button onclick="kiirat()">5. Kiiratás</button>
+    <button onclick="szoroz()">6. Szorzás</button>
+    <button onclick="vizsgalat()">7. Visgálat</button>
+
+    <script>
+        let szam1 = 5;
+        let szam2 = 10;
+
+        function kiirat() {
+document.getElementById("szoveg").innerHTML = "A két változó értéke: " + szam1 + 
+"és " + szam2;
+        }
+        function szoroz() {
+            document.getElementById("szoveg").innerHTML = "A szorzatok: " + szam1*szam2;
+        }
+
+        function vizsgalat() {
+            if (szam1 > szam2){
+            document.getElementById("szoveg").innerHTML = szam1 +  " nagyobb, mint a " + szam2;
+            }
+            else if ( szam2 > szam1)
+            {
+                document.getElementById("szoveg").innerHTML = szam2 + "nagyobb, mint a " +
+                szam1;
+            }
+            else {
+                document.getElementById("szoveg").innerHTML = szam1 + " és " + szam2  + "Egyenlőek";
+            }
+        }
+         function valtoztat() {
+            szam1 = 200;
+            szam2 = 150;
+         }
+
+    </script>
+</body>
+</html>

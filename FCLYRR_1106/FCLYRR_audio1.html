@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main {
+            display: block;
+            width: fit-content;
+            border-bottom: 4px solid gray;
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Saját audio lejátszása_FCLYRR</h1>
+    </header>
+
+    <main>
+        <audio id="stan" src="Stan.mp3" controls></audio>
+        
+
+        <script>
+            const stan = document.getElementById('stan');
+            
+        </script>
+
+        <div class="buttons">
+            <p>
+                <button id="startStop">lejátszás / szünet</button>
+                &nbsp;&nbsp;&nbsp;
+               
+            </p>
+
+            <p>
+                <button onclick="audio.volume = 0">néma</button>
+                <button onclick="audio.volume = 0.5">halk</button>
+                <button onclick="audio.volume = 1">hangos</button>
+                &nbsp;&nbsp;&nbsp;
+                <button onclick="audio.playbackRate = 0.25">nagyon lassú</button>
+                <button onclick="audio.playbackRate = 0.5">lassú</button>
+                <button onclick="audio.playbackRate = 1">normál</button>
+                <button onclick="audio.playbackRate = 2">gyors</button>
+                <button onclick="audio.playbackRate = 4">nagyon gyors</button>
+            </p>
+        </div>
+    </main>
+    <p>
+            <button onclick="alert(audio.ended)">befejeződött-e</button>
+            <button onclick="alert(audio.duration)">audió hossza (mp)</button>
+            <button onclick="alert(audio.currentTime)">jelenlegi pozíció</button>
+            <button onclick="audio.currentTime = 90">ugrás másfél perchez</button>
+        </p>
+    </div>
+</main>
+
+<footer>
+    <h3>Forrás:</h3>
+    <p><a href="https://www.w3schools.com/html/html5_audio.asp">https://www.w3schools.com/html/html5_audio.asp</a></p>
+</footer>
+
+<script>
+    document.getElementById('startStop').addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+
+    audio.addEventListener('ended', () => {
+        alert('VÉGE');
+    });
+</script>
+</body>
+</html>
