@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tömb elemeinek törlése</title>
+</head>
+<body>
+    <h3>Tömb elemek törlése</h3>
+
+     <strong>Előtte: </strong> <p id="FCLYRR"></p>
+    <strong>Utánna:</strong> <p id="FCLYRR"></p>
+
+    <button onclick="torol1()">Tömb 0. indexű elemének törlése</button>
+    <button onclick="torol2()">Tömb 1. indexű elemének törlése</button>
+    <button onclick="torol3()">Tömb 2. indexű elemének törlése</button>
+
+    <script>
+        let prognyelvek = ["HTML5", "CSS3", "JS"];
+         document.getElementById("FCLYRR").innerHTML = prognyelvek;
+
+         function torol1() {
+            delete prognyelvek[0];
+            document.getElementById("FCLYRR").innerHTML = prognyelvek;
+         }
+         function torol2() {
+            delete prognyelvek[1];
+            document.getElementById("FCLYRR").innerHTML = prognyelvek;
+         }
+         function torol3() {
+            delete prognyelvek[2];
+            document.getElementById("FCLYRR").innerHTML = prognyelvek;
+         }
+    </script>
+</body>
+</html>

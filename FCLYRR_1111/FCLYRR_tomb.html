@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tömb elérése</title>
+</head>
+<body>
+    <h3>Tömb elemeinek elérése, kiírása</h3>
+
+    <p id="FCLYRR"></p>
+
+    <button onclick="elso()">Első elem(0.index)</button>
+    <button onclick="masodik()">Második elem(1.index)</button>
+    <button onclick="harmadik()">Harmadik elem(2.index)</button>
+    <button onclick="osszes()">Összes elem</button>
+
+    <script>
+        let prognyelvek = ["HTML5", "CSS3", "JS"];
+        function elso(){
+            document.getElementById("FCLYRR").innerHTML = prognyelvek[0];
+        }
+
+        function masodik(){
+            document.getElementById("FCLYRR").innerHTML = prognyelvek[1];
+        }
+        function harmadik(){
+            document.getElementById("FCLYRR").innerHTML = prognyelvek[2];
+        }
+        function osszes(){
+            document.getElementById("FCLYRR").innerHTML = prognyelvek;
+        }
+    </script>
+</body>
+</html>

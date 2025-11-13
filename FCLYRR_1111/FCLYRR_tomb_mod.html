@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tömb elemének módosítása</title>
+</head>
+<body>
+    <h3>Tömb elemeinek módosítása</h3>
+
+    <strong>Előtte: </strong> <p id="FCLYRR"></p>
+    <strong>Utánna:</strong> <p id="FCLYRR_1"></p>
+
+    <button onclick="modosit()">Tömbelem módosítása</button>
+
+    <script>
+        let prognyelvek = ["HTML5", "CSS3", "JS"];
+        document.getElementById("FCLYRR").innerHTML = prognyelvek;
+        prognyelvek[1] = "C nyelv";
+
+        function modosit(){
+            document.getElementById("FCLYRR_1").innerHTML = prognyelvek;
+        }
+    </script>
+</body>
+</html>
