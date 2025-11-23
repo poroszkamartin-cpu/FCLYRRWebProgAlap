@@ -1,0 +1,81 @@
+{
+  "orarend": {
+    "08:00": {
+      "hetfo": "Programozás alapjai",
+      "kedd": "Webprogramozás alapjai",
+      "szerda": "",
+      "csutortok": "Webprogramozás alapjai",
+      "pentek": ""
+    },
+    "09:00": {
+      "hetfo": "Programozás alapjai",
+      "kedd": "Webprogramozás alapjai",
+      "szerda": "",
+      "csutortok": "Webprogramozás alapjai",
+      "pentek": ""
+    },
+    "10:00": {
+      "hetfo": "Programozás alapjai",
+      "kedd": "Diszkrét matematika és lineáris algebra",
+      "szerda": "",
+      "csutortok": "Számítógép architektúrák",
+      "pentek": ""
+    },
+    "11:00": {
+      "hetfo": "",
+      "kedd": "Diszkrét matematika és lineáris algebra",
+      "szerda": "",
+      "csutortok": "",
+      "pentek": ""
+    },
+    "12:00": {
+      "hetfo": "",
+      "kedd": "Diszkrét matematika és lineáris algebra",
+      "szerda": "",
+      "csutortok": "",
+      "pentek": ""
+    },
+    "13:00": {
+      "hetfo": "",
+      "kedd": "",
+      "szerda": "",
+      "csutortok": "",
+      "pentek": "Bevezetés az informatikába"
+    },
+    "14:00": {
+      "hetfo": "",
+      "kedd": "",
+      "szerda": "",
+      "csutortok": "",
+      "pentek": "Bevezetés az informatikába"
+    },
+    "15:00": {
+      "hetfo": "",
+      "kedd": "",
+      "szerda": "Idegen nyelv I.",
+      "csutortok": "",
+      "pentek": "Bevezetés az informatikába"
+    },
+    "16:00": {
+      "hetfo": "",
+      "kedd": "",
+      "szerda": "Idegen nyelv I.",
+      "csutortok": "Az informatika logikai alapjai",
+      "pentek": "Bevezetés az informatikába"
+    },
+    "17:00": {
+      "hetfo": "",
+      "kedd": "",
+      "szerda": "Idegen nyelv I.",
+      "csutortok": "Az informatika logikai alapjai",
+      "pentek": ""
+    },
+    "18:00": {
+      "hetfo": "",
+      "kedd": "",
+      "szerda": "",
+      "csutortok": "Az informatika logikai alapjai",
+      "pentek": ""
+    }
+  }
+}

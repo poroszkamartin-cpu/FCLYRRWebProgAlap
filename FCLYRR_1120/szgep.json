@@ -1,0 +1,20 @@
+{
+    "FCLYRR_orarend": {
+        "ora": [
+            {
+                "targy": "Szoftvertesztelés",
+                "idopont": {
+                    "nap": "hétfő",
+                    "tol": 10,
+                    "ig" : 12
+                },
+                "helyszin" : "inf. 103",
+                "oktato": "Dr. Bednarik László",
+                "szak": "PTI"
+            },
+            {
+                "targy": 
+            }
+        ]
+    }
+}
