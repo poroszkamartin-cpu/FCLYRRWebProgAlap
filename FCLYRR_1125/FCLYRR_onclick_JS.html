@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h3>Függvény visszatérési érték </h3>
+    <b>A két szám összege: </b> <p id="FCLYRR"></p>
+    <button id="gomb">Összeadás</button> 
+
+    <script>
+        document.getElementById("gomb").onclick = function(){osszead(10,20)};
+
+        function osszead(szam1, szam2) {
+            document.getElementById("FCLYRR").innerHTML = szam1 + szam2;
+        }
+    </script>
+</body>
+</html>

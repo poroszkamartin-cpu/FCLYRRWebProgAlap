@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> InnerHTML</h3>
+
+    <p id="FCLYRR1">Ennek olvassa ki a tartalmát.</p>
+    <p id="FCLYRR2">Ennek írja át a tartalmat</p>
+
+    <button onclick="kiolvas()">kiolvas</button>
+    <button onclick="atir()">atir</button>
+
+    <script>
+        function kiolvas() {
+            alert(document.getElementById("FCLYRR1").innerHTML);
+        }
+        function atir() {
+            document.getElementById("FCLYRR2").innerHTML = " Átírja a tartalmat";
+        }
+    </script>
+
+    
+</body>
+</html>
