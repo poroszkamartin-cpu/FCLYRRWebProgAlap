@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Órarend</title>
+  <title>Heti órarend</title>
   <style>
     body {
       background: #111;
@@ -38,106 +38,185 @@
       width: 80px;
       color: #9bd1ff;
     }
+    td:hover {
+      background: #2a2a2a;
+      cursor: pointer;
+    }
+    .tooltip {
+      position: absolute;
+      background: #000;
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      display: none;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
-  <h1>Heti órarend</h1>
 
-  <table>
-    <tr>
-      <th>Idő</th>
-      <th>Hétfő</th>
-      <th>Kedd</th>
-      <th>Szerda</th>
-      <th>Csütörtök</th>
-      <th>Péntek</th>
-    </tr>
+<h1>Heti órarend</h1>
 
-    
-    
-    <tr>
-      <td class="time-col">08:00</td>
-      <td rowspan="3">Programozás alapjai</td>
-      <td rowspan="2">Webprogramozás alapjai</td>
-      <td></td>
-      <td rowspan="2">Webprogramozás alapjai</td>
-      <td></td>
-    </tr>
+<table>
+  <tr>
+    <th>Idő</th>
+    <th>Hétfő</th>
+    <th>Kedd</th>
+    <th>Szerda</th>
+    <th>Csütörtök</th>
+    <th>Péntek</th>
+  </tr>
 
-    
-    <tr>
-      <td class="time-col">09:00</td>
-      <td></td>
-      <td></td>
-    </tr>
+  <!-- 08:00 -->
+  <tr>
+    <td class="time-col">08:00</td>
+    <td rowspan="3">Programozás alapjai</td>
+    <td>Webprogramozás alapjai</td>
+    <td></td>
+    <td>Webprogramozás alapjai</td>
+    <td></td>
+  </tr>
 
-    
-    <tr>
-      <td class="time-col">10:00</td>
-      <td rowspan="3">Diszkrét matematika és lineáris algebra</td>
-      <td></td>
-      <td>Számítógép architektúrák</td>
-      <td></td>
-    </tr>
+  <!-- 09:00 -->
+  <tr>
+    <td class="time-col">09:00</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
 
-    
-    <tr>
-      <td class="time-col">11:00</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
+  <!-- 10:00 -->
+  <tr>
+    <td class="time-col">10:00</td>
+    <td rowspan="3">Diszkrét matematika és lineáris algebra</td>
+    <td></td>
+    <td>Számítógép architektúrák</td>
+    <td></td>
+  </tr>
 
-    
-    <tr>
-      <td class="time-col">12:00</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
+  <!-- 11:00 -->
+  <tr>
+    <td class="time-col">11:00</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
 
-    
-    <tr>
-      <td class="time-col">13:00</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td rowspan="4">Bevezetés az informatikába</td>
-    </tr>
+  <!-- 12:00 -->
+  <tr>
+    <td class="time-col">12:00</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
 
+  <!-- 13:00 -->
+  <tr>
+    <td class="time-col">13:00</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td rowspan="4">Bevezetés az informatikába</td>
+  </tr>
 
-    <tr>
-      <td class="time-col">14:00</td>
-      <td></td><td></td><td></td><td></td>
-    </tr>
+  <!-- 14:00 -->
+  <tr>
+    <td class="time-col">14:00</td>
+    <td></td><td></td><td></td><td></td>
+  </tr>
 
-    
-    <tr>
-      <td class="time-col">15:00</td>
-      <td></td><td></td><td rowspan="3">Idegen nyelv I.</td><td></td>
-    </tr>
+  <!-- 15:00 -->
+  <tr>
+    <td class="time-col">15:00</td>
+    <td></td><td></td><td rowspan="3">Idegen nyelv I.</td><td></td>
+  </tr>
 
-    
-    <tr>
-      <td class="time-col">16:00</td>
-      <td></td><td></td><td>Az informatika logikai alapjai</td>
-    </tr>
+  <!-- 16:00 -->
+  <tr>
+    <td class="time-col">16:00</td>
+    <td></td><td></td><td>Az informatika logikai alapjai</td><td></td>
+  </tr>
 
-    
-    <tr>
-      <td class="time-col">17:00</td>
-      <td></td><td></td><td></td><td rowspan="2">Az informatika logikai alapjai</td><td></td>
-    </tr>
+  <!-- 17:00 -->
+  <tr>
+    <td class="time-col">17:00</td>
+    <td></td><td></td><td></td><td></td><td></td>
+  </tr>
 
-    
-    <tr>
-      <td class="time-col">18:00</td>
-      <td></td><td></td><td></td><td></td>
-    </tr>
+  <!-- 18:00 -->
+  <tr>
+    <td class="time-col">18:00</td>
+    <td></td><td></td><td></td><td></td><td></td>
+  </tr>
 
-  </table>
+  <!-- 19:00 -->
+  <tr>
+    <td class="time-col">19:00</td>
+    <td></td><td></td><td></td><td></td><td></td>
+  </tr>
+
+  <!-- 20:00 -->
+  <tr>
+    <td class="time-col">20:00</td>
+    <td></td><td></td><td></td><td></td><td></td>
+  </tr>
+
+  <!-- 21:00 -->
+  <tr>
+    <td class="time-col">21:00</td>
+    <td></td><td></td><td></td><td></td><td></td>
+  </tr>
+
+  <!-- 22:00 -->
+  <tr>
+    <td class="time-col">22:00</td>
+    <td></td><td></td><td></td><td></td><td></td>
+  </tr>
+
+  <!-- 23:00 -->
+  <tr>
+    <td class="time-col">23:00</td>
+    <td></td><td></td><td></td><td></td><td></td>
+  </tr>
+
+</table>
+
+<div class="tooltip" id="tip"></div>
+<script>
+const tip = document.getElementById('tip');
+
+document.querySelectorAll('td').forEach(cell => {
+
+  const subject = cell.innerText.trim();
+
+  const info = {
+    "Programozás alapjai": { tanar: "Gégény Dávid", terem: "Online" },
+    "Webprogramozás alapjai": { tanar: "Dr. Bednarik László", terem: "Inf.124" },
+    "Diszkrét matematika és lineáris algebra": { tanar: "Dr. Földvári Attila József", terem: "Inf.117" },
+    "Számítógép architektúrák": { tanar: "Dr.Bednarik László", terem: "Inf.124" },
+    "Bevezetés az informatikába": { tanar: "Janics Tamás", terem: "Online" },
+    "Idegen nyelv I.": { tanar: "Kováts Imre Győző", terem: "111" },
+    "Az informatika logikai alapjai": { tanar: "Dr. Godó Zoltán Attila", terem: "Online" }
+  };
+
+  if(info[subject]){
+    cell.addEventListener('mousemove', e => {
+      tip.style.display = 'block';
+      tip.style.left = e.pageX + 15 + 'px';
+      tip.style.top = e.pageY + 15 + 'px';
+      tip.innerText = `${info[subject].tanar} — ${info[subject].terem}`;
+    });
+
+    cell.addEventListener('mouseleave', () => {
+      tip.style.display = 'none';
+    });
+  }
+});
+</script>
 </body>
 </html>
