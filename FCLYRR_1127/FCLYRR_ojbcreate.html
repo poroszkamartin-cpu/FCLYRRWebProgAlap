@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Objektum létrehozása</h3>
+
+    <p id="FCLYRR"></p>
+
+    <button onclick="kiir()">Adatok kiiratása</button>
+
+    <script>
+        const hallgato = {
+            nev: "Pacika macika gáspár lacika",
+            eletkor: 20,
+            egyetem: "THE",
+            szak: "PTI"
+        };
+
+        function kiir() {
+            document.getElementById("FCLYRR").innerHTML = "<b>Név:</b>"
+                +hallgato.nev + ", <br> <b>Életkor: </b>" + hallgato.eletkor +
+                ",<br> <b>Egyetem:</b>" + hallgato.egyetem + "<br> <b>Szak:</b>" +
+                hallgato.szak;
+        }
+    </script>
+</body>
+</html>

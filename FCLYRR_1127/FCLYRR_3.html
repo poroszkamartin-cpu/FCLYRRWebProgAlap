@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script  src = "jquery/jquary -3.7.1.js"> </script>
+
+    <script>
+$(document).ready(function(){
+    $("#p1").click(function(){
+        $(this).hide();
+    });
+
+    $("form").mousedown(function(){
+        $(this).css("border", "10px #333399 solid");
+    });
+
+    $("form").mouseup(function(){
+        $(this).css("border", "10px");
+    });
+    $("nev#email,#jelszo,p").hover(function(){
+
+    },
+function(){
+
+}
+);
+$("#nev, #email,#jelszo").focus(function(){
+    $(this).css("background-color", "#ff99ff");
+});
+
+$("#nev,#emai
+});
+
+    </script>
+</head>
+<body>
+    <h2>Jquery feladatok</h2>
+
+    <p> A jQuery egy JavaScript programozói könyvtár, amelyet John Resig kezdett
+        fejleszteni
+    </p>
+    <p><strong>Elterjedtnek tekinthető, segítségével könnyen bejárható egy HTML
+        oldal DOM-ja
+    </strong></p>
+    <btn><strong>Kattints ide! - bekezdés elrejtése </strong></btn>
+
+    <br> 
+
+    <form style="padding: 10px; width: 500px;">
+
+        <b>Név:</b> <input id="nev" name="nev"> <br><br>
+        <b>E-mail:</b> <input id="email" name="email"> <br><br>
+        <b>Jelszó</b> <input id="jelszo" name="jelszo" type="password">
+        <br><br><br>
+
+        <input id="gomb" type="button" value="Jelentkezés">
+    </form>
+</body>
+</html>
