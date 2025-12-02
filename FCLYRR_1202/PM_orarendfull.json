@@ -1,0 +1,79 @@
+{
+  "ora": [
+    {
+      "targy": "Programozás alapjai",
+      "idopont": { "nap": "Hétfő", "tol": 8, "ig": 11 },
+      "helyszin": "Online",
+      "oktato": "Gégény Dávid",
+      "szak": "Programtervező informatikus"
+    },
+    {
+      "targy": "Bevezetés TEX-be",
+      "idopont": { "nap": "Hétfő", "tol": 14, "ig": 17 },
+      "helyszin": "Online",
+      "oktato": "Dr. Veres Laura",
+      "szak": "Programtervező informatikus"
+    },
+    {
+      "targy": "Webprogramozás alapjai",
+      "idopont": { "nap": "Kedd", "tol": 8, "ig": 9 },
+      "helyszin": "Inf.124",
+      "oktato": "Dr. Bednarik László",
+      "szak": "Programtervező informatikus"
+    },
+    {
+      "targy": "Diszkrét matematika és lineáris algebra",
+      "idopont": { "nap": "Kedd", "tol": 10, "ig": 12 },
+      "helyszin": "Tanterem 117",
+      "oktato": "Dr. Földvári Attila",
+      "szak": "Programtervező informatikus"
+    },
+    {
+      "targy": "Idegen nyelv I.",
+      "idopont": { "nap": "Szerda", "tol": 15, "ig": 18 },
+      "helyszin": "Tanterem 111",
+      "oktato": "Kováts Imre Győző",
+      "szak": "Programtervező informatikus"
+    },
+    {
+      "targy": "Kutatás és tanulás módszertan",
+      "idopont": { "nap": "Szerda", "tol": 13, "ig": 14 },
+      "helyszin": "Tanterem 111",
+      "oktato": "Dr. Kökényesi Nikoletta Judit",
+      "szak": "Programtervező informatikus"
+    },
+    {
+      "targy": "Webprogramozás alapjai",
+      "idopont": { "nap": "Csütörtök", "tol": 8, "ig": 9 },
+      "helyszin": "Inf.124",
+      "oktato": "Dr. Bednarik László",
+      "szak": "Programtervező informatikus"
+    },
+    {
+      "targy": "Számítógép architektúrák",
+      "idopont": { "nap": "Csütörtök", "tol": 10, "ig": 11 },
+      "helyszin": "Inf.124",
+      "oktato": "Dr. Bednarik László",
+      "szak": "Programtervező informatikus"
+    },
+    {
+      "targy": "Az informatika logikai alapjai",
+      "idopont": { "nap": "Csütörtök", "tol": 16, "ig": 19 },
+      "helyszin": "Online",
+      "oktato": "Dr. Godó Zoltán Attila",
+      "szak": "Programtervező informatikus"
+    },
+    {
+      "targy": "Bevezetés az informatikába",
+      "idopont": { "nap": "Péntek", "tol": 13, "ig": 17 },
+      "helyszin": "Online",
+      "oktato": "Janics Tamás",
+      "szak": "Programtervező informatikus"
+    }
+  ],
+  "cim": { "iranyitoszam": 3950, "varos": "Sárospatak", "utca": "Eötvös 7." },
+  "telefonszam": [
+    { "tipus": "vezetékes", "szam": "0647 513-000" },
+    { "tipus": "mobil", "szam": "0670 555-4567" }
+  ]
+}
